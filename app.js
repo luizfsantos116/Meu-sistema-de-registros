@@ -12,11 +12,18 @@ console.log(caminhoArquivo); */
 const path = require('path');
 const caminhoArquivo = path.join(__dirname, 'atendimento.txt');
 fs.writeFileSync(caminhoArquivo, 'Cliente: Ana | Serviço: Troca de teclado');
-console.log('Arquivo criado!'); */
-
+console.log('Arquivo criado!');
+ */
 // 04. Lendo o conteúdo do arquivo
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 const caminhoArquivo = path.join(__dirname, 'atendimento.txt');
 const conteudo = fs.readFileSync(caminhoArquivo, 'utf-8');
-console.log(conteudo);
+console.log(conteudo); */
+
+// 06. Adicionando sem apagar
+const fs = require('fs');
+const path = require('path');
+const caminhoArquivo = path.join(__dirname, 'atendimento.txt');
+fs.appendFileSync(caminhoArquivo, '\nCliente: Luiz | Serviço: Tela quebrada');
+console.log('Registro adicionado!');
